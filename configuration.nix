@@ -14,6 +14,9 @@
 			./modules/audio.nix
 			./modules/bluetooth.nix
 			./modules/desktop.nix
+
+			# System Packages
+			./modules/keyd.nix
 		];
 
 	users.users.hc = {

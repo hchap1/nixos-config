@@ -18,9 +18,14 @@
 			url = "github:nix-community/nix-index-database";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+		nvim-config = {
+			url = "github:hchap1/nvim";
+			flake = false;
+		};
 	};
 
-	outputs = { self, nixpkgs, home-manager, catppuccin, nix-index-database, ... } @ inputs:
+	outputs = { self, nixpkgs, home-manager, catppuccin, nix-index-database, nvim-config, ... } @ inputs:
 	let
 		system = "x86_64-linux";
 		pkgs = nixpkgs.legacyPackages.${system};
