@@ -31,6 +31,9 @@
 		shell = pkgs.fish;
 	};
 
+	# Allow 'unfree' packages [e.g. Spotify]
+	nixpkgs.config.allowUnfree = true;
+
 	time.timeZone = "Australia/Brisbane";
 	system.stateVersion = "25.11";
 }
