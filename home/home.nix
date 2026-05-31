@@ -16,6 +16,7 @@
 		./packages/fish.nix
 		./packages/networkmanager-applet.nix
 		./packages/ghostty.nix
+		./packages/ssh.nix
 
 		# Applications
 		./packages/brave.nix
