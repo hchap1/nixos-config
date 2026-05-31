@@ -76,12 +76,29 @@
         "type": "github"
       }
     },
+    "nvim-config": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1754795723,
+        "narHash": "sha256-1THhhPprcGqn8f9i3DMuIfyVgsh1h9s1UmiXP8BFfiA=",
+        "owner": "hchap1",
+        "repo": "nvim",
+        "rev": "82f7e035c1791a6624bbfcdbfc9708cdaf99632a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hchap1",
+        "repo": "nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "catppuccin": "catppuccin",
         "home-manager": "home-manager",
         "nix-index-database": "nix-index-database",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nvim-config": "nvim-config"
       }
     }
   },
