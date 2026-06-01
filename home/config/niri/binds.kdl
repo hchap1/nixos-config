@@ -34,8 +34,8 @@ binds {
 
 	// Column
 	Mod+Shift+C { center-window; }
-	Mod+C+H { consume-or-expel-window-left; }
-	Mod+C+L { consume-or-expel-window-right; }
+	Mod+Ctrl+H { consume-or-expel-window-left; }
+	Mod+Ctrl+L { consume-or-expel-window-right; }
 
 	// Monitors
 	Mod+1 { focus-monitor "DP-3"; }
