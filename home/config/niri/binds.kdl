@@ -38,12 +38,12 @@ binds {
 	Mod+C+L { consume-or-expel-window-right; }
 
 	// Monitors
-	Mod+1 { focus-monitor DP-3; }
-	Mod+2 { focus-monitor HDMI-A-1; }
-	Mod+3 { focus-monitor DP-2; }
-	Mod+Shift+1 { move-workspace-to-monitor DP-3; }
-	Mod+Shift+2 { move-workspace-to-monitor HDMI-A-1; }
-	Mod+Shift+3 { move-workspace-to-monitor DP-2; }
+	Mod+1 { focus-monitor "DP-3"; }
+	Mod+2 { focus-monitor "HDMI-A-1"; }
+	Mod+3 { focus-monitor "DP-2"; }
+	Mod+Shift+1 { move-workspace-to-monitor "DP-3"; }
+	Mod+Shift+2 { move-workspace-to-monitor "HDMI-A-1"; }
+	Mod+Shift+3 { move-workspace-to-monitor "DP-2"; }
 	
 	// Overview
 	Mod+Tab { toggle-overview; }
