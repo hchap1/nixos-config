@@ -1,0 +1,210 @@
+/* ~/.config/waybar/style.css
+   Catppuccin Mocha palette
+   https://github.com/catppuccin/catppuccin */
+
+/* ── Palette ───────────────────────────────────────────────── */
+@define-color base    #1e1e2e;
+@define-color mantle  #181825;
+@define-color crust   #11111b;
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+@define-color overlay0 #6c7086;
+@define-color overlay1 #7f849c;
+@define-color text     #cdd6f4;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #bac2de;
+
+@define-color rosewater #f5e0dc;
+@define-color flamingo  #f2cdcd;
+@define-color pink      #f5c2e7;
+@define-color mauve     #cba6f7;
+@define-color red       #f38ba8;
+@define-color maroon    #eba0ac;
+@define-color peach     #fab387;
+@define-color yellow    #f9e2af;
+@define-color green     #a6e3a1;
+@define-color teal      #94e2d5;
+@define-color sky       #89dceb;
+@define-color sapphire  #74c7ec;
+@define-color blue      #89b4fa;
+@define-color lavender  #b4befe;
+
+/* ── Base bar ───────────────────────────────────────────────── */
+* {
+  font-family: "JetBrainsMono Nerd Font", "Noto Sans", monospace;
+  font-size: 12px;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: @base;
+  border-bottom: 2px solid @surface0;
+  color: @text;
+  transition: background-color 0.3s ease;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+/* ── Sections ───────────────────────────────────────────────── */
+.modules-left,
+.modules-center,
+.modules-right {
+  padding: 0 8px;
+}
+
+/* ── Generic module pill ────────────────────────────────────── */
+#workspaces,
+#window,
+#mpris,
+#temperature,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#bluetooth,
+#clock.date,
+#clock.time,
+#custom-separator {
+  background-color: @surface0;
+  border-radius: 8px;
+  padding: 4px 10px;
+  margin: 4px 3px;
+  color: @text;
+}
+
+/* ── Workspaces ─────────────────────────────────────────────── */
+#workspaces button {
+  background: transparent;
+  color: @overlay0;
+  padding: 0 4px;
+  border-radius: 6px;
+  min-width: 16px;
+  transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+  background: @surface1;
+  color: @text;
+}
+
+#workspaces button.active {
+  background: @surface1;
+  color: @lavender;
+}
+
+#workspaces button.urgent {
+  background: @red;
+  color: @base;
+}
+
+/* ── Window title ───────────────────────────────────────────── */
+#window {
+  color: @subtext1;
+}
+
+/* ── MPRIS ──────────────────────────────────────────────────── */
+#mpris {
+  color: @mauve;
+}
+
+#mpris.paused {
+  color: @overlay1;
+}
+
+#mpris.stopped {
+  background: transparent;
+  padding: 0;
+}
+
+/* ── Temperature ────────────────────────────────────────────── */
+#temperature {
+  color: @peach;
+}
+
+#temperature.critical {
+  color: @red;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0.6; }
+}
+
+/* ── CPU ────────────────────────────────────────────────────── */
+#cpu {
+  color: @red;
+}
+
+/* ── Memory ─────────────────────────────────────────────────── */
+#memory {
+  color: @green;
+}
+
+/* ── Separator ──────────────────────────────────────────────── */
+#custom-separator,
+#separator {
+  background: transparent;
+  color: @surface1;
+  font-size: 14px;
+  padding: 0 4px;
+  margin: 0;
+}
+
+/* ── Network ─────────────────────────────────────────────────── */
+#network {
+  color: @sky;
+}
+
+#network.disconnected {
+  color: @overlay0;
+}
+
+/* ── Volume ─────────────────────────────────────────────────── */
+#pulseaudio {
+  color: @blue;
+}
+
+#pulseaudio.muted {
+  color: @overlay0;
+}
+
+/* ── Bluetooth ───────────────────────────────────────────────── */
+#bluetooth {
+  color: @sapphire;
+}
+
+#bluetooth.off {
+  color: @overlay0;
+}
+
+#bluetooth.connected {
+  color: @sky;
+}
+
+/* ── Clock ──────────────────────────────────────────────────── */
+#clock.date {
+  color: @green;
+}
+
+#clock.time {
+  color: @yellow;
+  font-weight: 500;
+}
+
+/* ── Tooltip ─────────────────────────────────────────────────── */
+tooltip {
+  background: @mantle;
+  border: 1px solid @surface1;
+  border-radius: 8px;
+  color: @text;
+  font-size: 12px;
+}
+
+tooltip label {
+  color: @text;
+}

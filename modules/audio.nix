@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-	programs.nm-applet = {
-		enable = true;
-	};
-
 	services.pipewire = {
 		enable = true;
 		alsa.enable = true;
@@ -15,4 +11,8 @@
 	};
 
 	security.rtkit.enable = true;
+
+	environment.systemPackages = with pkgs; [
+		pavucontrol
+	];
 }

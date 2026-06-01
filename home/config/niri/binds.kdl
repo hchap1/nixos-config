@@ -16,23 +16,38 @@ binds {
 	}
 
 	// Keybinds
-	Mod+H { focus-column-or-monitor-left }
-	Mod+L { focus-column-or-monitor-right }
-	Mod+Shift+H { move-column-left }
-	Mod+Shift+L { move-column-right }
+	Mod+H { focus-column-or-monitor-left; }
+	Mod+L { focus-column-or-monitor-right; }
+	Mod+Shift+H { move-column-left; }
+	Mod+Shift+L { move-column-right; }
 
-	Mod+K { focus-window-or-workspace-up }
-	Mod+J { focus-window-or-workspace-down }
-	Mod+Shift+K { move-window-up-or-to-workspace-up }
-	Mod+Shift+J { move-window-down-or-to-workspace-down }
+	Mod+K { focus-window-or-workspace-up; }
+	Mod+J { focus-window-or-workspace-down; }
+	Mod+Shift+K { move-window-up-or-to-workspace-up; }
+	Mod+Shift+J { move-window-down-or-to-workspace-down; }
 
 	// Fullscreen
-	Mod+F { fullscreen-window }
-	Mod+Shift+F { toggle-window-floating }
-	Mod+V { switch-focus-between-floating-and-tiling }
-	Mod+Shift+V { move-floating-window }
-	Mod+Q { close-window }
+	Mod+F { fullscreen-window; }
+	Mod+Shift+F { toggle-window-floating; }
+	Mod+V { switch-focus-between-floating-and-tiling; }
+	Mod+Q { close-window; }
+
+	// Column
+	Mod+Shift+C { center-window; }
+	Mod+C+H { consume-or-expel-window-left; }
+	Mod+C+L { consume-or-expel-window-right; }
+
+	// Monitors
+	Mod+1 { focus-monitor DP-3; }
+	Mod+2 { focus-monitor HDMI-A-1; }
+	Mod+3 { focus-monitor DP-2; }
+	Mod+Shift+1 { move-workspace-to-monitor DP-3; }
+	Mod+Shift+2 { move-workspace-to-monitor HDMI-A-1; }
+	Mod+Shift+3 { move-workspace-to-monitor DP-2; }
 	
 	// Overview
-	Mod+Tab { toggle-overview }
+	Mod+Tab { toggle-overview; }
+
+	// Launcher (fuzzel)
+	Mod+Space { spawn "fuzzel"; }
 }
