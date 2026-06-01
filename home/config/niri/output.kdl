@@ -15,3 +15,18 @@ output "DP-3" {
 	scale 1.0
 	position x=0 y=0
 }
+
+prefer-no-csd
+
+window-rule {
+	clip-to-geometry true
+	draw-border-with-background false
+	geometry-corner-radius 12
+
+	focus-ring {
+		on
+		width 5
+		active-color "#cba6f7"
+		inactive-color "#181825"
+	}
+}
