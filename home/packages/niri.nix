@@ -2,5 +2,5 @@
 
 {
 	# Config location
-	# xdg.configFile."niri/config.kdl".source = ../config/niri/niri.kdl;
+	xdg.configFile."niri".source = ../config/niri;
 }

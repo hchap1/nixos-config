@@ -6,5 +6,5 @@
 		defaultEditor = true;
 	};
 
-	xdg.configFile."nvim".source = inputs.nvim-config;
+	xdg.configFile."nvim".source = "${inputs.nvim-config}";
 }
