@@ -1,0 +1,38 @@
+binds {
+	// Spawn GHOSTTY
+	Mod+Return {
+		spawn "ghostty";
+	}
+
+	// Volume Control
+	XF86AudioRaiseVolume allow-when-locked=true {
+		spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+";
+	}
+	XF86AudioLowerVolume allow-when-locked=true {
+		spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-";
+	}
+	XF86AudioMute allow-when-locked=true {
+		spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle";
+	}
+
+	// Keybinds
+	Mod+H { focus-column-or-monitor-left }
+	Mod+L { focus-column-or-monitor-right }
+	Mod+Shift+H { move-column-left }
+	Mod+Shift+L { move-column-right }
+
+	Mod+K { focus-window-or-workspace-up }
+	Mod+J { focus-window-or-workspace-down }
+	Mod+Shift+K { move-window-up-or-to-workspace-up }
+	Mod+Shift+J { move-window-down-or-to-workspace-down }
+
+	// Fullscreen
+	Mod+F { fullscreen-window }
+	Mod+Shift+F { toggle-window-floating }
+	Mod+V { switch-focus-between-floating-and-tiling }
+	Mod+Shift+V { move-floating-window }
+	Mod+Q { close-window }
+	
+	// Overview
+	Mod+Tab { toggle-overview }
+}
