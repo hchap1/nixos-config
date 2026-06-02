@@ -17,6 +17,7 @@
 
 			# System Packages
 			./modules/keyd.nix
+			./modules/fonts.nix
 		];
 
 	users.users.hc = {

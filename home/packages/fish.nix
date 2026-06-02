@@ -1,12 +1,6 @@
 { pkgs, ... }:
 
 {
-	home.packages = with pkgs; [
-		eza
-		ripgrep
-		bat
-	];
-
   programs.fish = {
     enable = true;
 
@@ -15,9 +9,12 @@
     '';
 
 	shellAliases = {
-		ll = "eza -lah";
-		ls = "eza";
+		ll = "eza -lah --icons";
+		ls = "eza --icons";
 		cat = "bat";
+		ga = "git add";
+		gc = "git commit";
+		gp = "git push";
 	};
   };
 }

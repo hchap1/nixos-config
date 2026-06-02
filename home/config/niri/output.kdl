@@ -25,8 +25,13 @@ window-rule {
 
 	focus-ring {
 		on
-		width 5
+		width 3
 		active-color "#cba6f7"
 		inactive-color "#181825"
 	}
+}
+
+hotkey-overlay {
+	skip-at-startup
+	hide-not-bound
 }
