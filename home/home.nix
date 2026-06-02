@@ -26,5 +26,6 @@
 
 		# Theming
 		./packages/theme.nix
+		./packages/mako.nix
 	];
 }
