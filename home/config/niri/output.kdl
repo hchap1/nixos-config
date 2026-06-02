@@ -35,3 +35,17 @@ hotkey-overlay {
 	skip-at-startup
 	hide-not-bound
 }
+
+layer-rule {
+	match namespace="mako"
+
+	shadow {
+		on
+		softness 10
+		spread 5
+		offset x=0 y=2
+		color "#00000040"
+	}
+
+	geometry-corner-radius 8
+}
