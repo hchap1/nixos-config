@@ -8,10 +8,13 @@
 		font = "JetBrainsMono Nerd Font";
 		background-color = "#1e1e2e";
 		text-color = "#cdd6f4";
-		border-color = "#89b4fa";
+		border-color = "#cba6f7";
 		border-radius = 8;
-		border-size = 2;
-		default-timeout = 5000;
+		border-size = 3;
+		default-timeout = 2000;
+		max-visible = 5;
+		layer = "top";
+		anchor = "top-right";
 	  };
 	};
 }
