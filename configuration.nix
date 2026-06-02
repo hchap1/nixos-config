@@ -18,6 +18,7 @@
 			# System Packages
 			./modules/keyd.nix
 			./modules/fonts.nix
+			./modules/notify.nix
 		];
 
 	users.users.hc = {
