@@ -15,6 +15,8 @@
 		max-visible = 5;
 		layer = "top";
 		anchor = "top-right";
+		shadow = true;
+		shadow-color = "#00000080";
 	  };
 	};
 }
