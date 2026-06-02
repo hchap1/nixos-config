@@ -28,4 +28,12 @@
 		./packages/theme.nix
 		./packages/mako.nix
 	];
+
+	home.sessionVariables = {
+		XDG_DOWNLOAD_DIR = "${config.home.homeDirectory}/Downloads";
+	};
+
+	home.packages = with pkgs; [
+	  xdg-user-dirs
+	];
 }

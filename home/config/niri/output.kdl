@@ -36,16 +36,12 @@ hotkey-overlay {
 	hide-not-bound
 }
 
-layer-rule {
-	match layer="top"
+window-rule {
+  match app-id="xdg-desktop-portal-gtk"
+  open-floating true
+}
 
-	shadow {
-		on
-		softness 10
-		spread 5
-		offset x=0 y=2
-		color "#00000040"
-	}
-
-	geometry-corner-radius 8
+window-rule {
+  match title="Save File"
+  open-floating true
 }
