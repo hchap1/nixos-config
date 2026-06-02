@@ -37,7 +37,7 @@ hotkey-overlay {
 }
 
 layer-rule {
-	match namespace="mako"
+	match layer="top"
 
 	shadow {
 		on

@@ -1,24 +1,40 @@
 { pkgs, ... }:
 
 {
-	services.mako = {
-	  enable = true;
+  services.mako.enable = false;
+  services.swaync = {
+    enable = true;
 
-	  settings = {
-		font = "JetBrainsMono Nerd Font";
-		background-color = "#1e1e2e77";
-		text-color = "#cdd6f4";
-		border-color = "#cba6f7";
-		border-radius = 8;
-		border-size = 3;
-		default-timeout = 2000;
-		max-visible = 5;
-		layer = "top";
-		anchor = "top-right";
-		shadow = true;
-		shadow-color = "#00000080";
-		padding=12;
-		outer-margin=10;
-	  };
-	};
+    settings = {
+      positionX = "right";
+      positionY = "top";
+
+      layer = "overlay";
+      control-center-layer = "top";
+
+      layer-shell = true;
+
+      notification-icon-size = 48;
+
+      control-center-margin-top = 10;
+      control-center-margin-right = 10;
+    };
+
+    style = ''
+      * {
+        font-family: "JetBrainsMono Nerd Font";
+      }
+
+      .notification {
+        background: rgba(30, 30, 46, 0.75);
+        border: 1px solid rgba(137, 180, 250, 0.6);
+        border-radius: 12px;
+      }
+
+      .control-center {
+        background: rgba(17, 17, 27, 0.75);
+        border-radius: 16px;
+      }
+    '';
+  };
 }
