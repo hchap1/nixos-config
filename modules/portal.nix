@@ -1,14 +1,11 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   xdg.portal = {
     enable = true;
+    xdgOpenUsePortal = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
-    ];
-
-    config.common.default = "gtk";
+    config.niri.default = lib.mkForce "gtk";
   };
 }

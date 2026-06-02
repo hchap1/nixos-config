@@ -1,0 +1,15 @@
+[0;1;32m●[0m xdg-desktop-portal-gnome.service - Portal service (GNOME implementation)
+     Loaded: loaded (]8;;file://battleship/etc/systemd/user/xdg-desktop-portal-gnome.service\/etc/systemd/user/xdg-desktop-portal-gnome.service]8;;\; linked-runtime; preset: ignored)
+     Active: [0;1;32mactive (running)[0m since Wed 2026-06-03 00:01:50 AEST; 10min ago
+ Invocation: 97173266b27749a6a6ac36273ef9c0c1
+   Main PID: 82558 (.xdg-desktop-po)
+      Tasks: 5[0;38:5:245m (limit: 77020)[0m
+     Memory: 5.7M (peak: 6.5M)
+        CPU: 52ms
+     CGroup: /user.slice/user-1000.slice/user@1000.service/app.slice/xdg-desktop-portal-gnome.service
+             └─[0;38:5:245m82558 /nix/store/ff7ylgalc5j72bqr3nnpf4x0znfa4a7h-xdg-desktop-portal-gnome-50.0/libexec/xdg-desktop-portal-gnome[0m
+
+Jun 03 00:01:50 battleship systemd[65611]: Starting Portal service (GNOME implementation)...
+Jun 03 00:01:50 battleship xdg-desktop-portal-gnome[82558]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mGDK backend forced via env var, portal dialogs will not work properly.[0m
+Jun 03 00:01:50 battleship xdg-desktop-portal-gnome[82558]: Non-compatible display server, exposing settings only.
+Jun 03 00:01:50 battleship systemd[65611]: Started Portal service (GNOME implementation).
