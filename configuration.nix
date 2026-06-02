@@ -20,6 +20,7 @@
 			./modules/fonts.nix
 			./modules/notify.nix
 			./modules/portal.nix
+			./modules/browser.nix
 		];
 
 	users.users.hc = {
