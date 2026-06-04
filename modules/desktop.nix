@@ -12,6 +12,7 @@
 		waybar
 		fuzzel
 		mako
+		noctalia-shell
 	];
 
 	services.greetd = {
