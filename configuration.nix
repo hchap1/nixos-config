@@ -22,6 +22,7 @@
 			./modules/portal.nix
 			./modules/browser.nix
 			./noctalia.nix
+			./modules/graphics.nix
 		];
 
 	users.users.hc = {

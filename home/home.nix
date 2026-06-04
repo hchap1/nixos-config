@@ -11,22 +11,23 @@
 
 		# Packages
 		./packages/niri.nix
-			./packages/neovim.nix
-			./packages/neovide.nix
-			./packages/git.nix
-			./packages/fish.nix
-			./packages/networkmanager-applet.nix
-			./packages/ghostty.nix
-			./packages/ssh.nix
+		./packages/neovim.nix
+		./packages/neovide.nix
+		./packages/git.nix
+		./packages/fish.nix
+		./packages/networkmanager-applet.nix
+		./packages/ghostty.nix
+		./packages/ssh.nix
+		./packages/screenshot.nix
 
-			# Applications
-			./packages/brave.nix
-			./packages/spotify.nix
-			./packages/vesktop.nix
+		# Applications
+		./packages/brave.nix
+		./packages/spotify.nix
+		./packages/vesktop.nix
 
-			# Theming
-			./packages/theme.nix
-			./packages/wallpaper.nix
+		# Theming
+		./packages/theme.nix
+		./packages/wallpaper.nix
 	];
 
 	home.sessionVariables = {
