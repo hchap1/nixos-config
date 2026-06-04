@@ -12,6 +12,7 @@
 		# Packages
 		./packages/niri.nix
 			./packages/neovim.nix
+			./packages/neovide.nix
 			./packages/git.nix
 			./packages/fish.nix
 			./packages/networkmanager-applet.nix
