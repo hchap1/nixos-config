@@ -1,5 +1,8 @@
 { pkgs, inputs, ... }:
 {
+	services.power-profiles-daemon.enable = true;
+	services.upower.enable = true;
+
 	home-manager.users.hc = {
 		imports = [
 			inputs.noctalia.homeModules.default
