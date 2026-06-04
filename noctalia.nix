@@ -13,6 +13,7 @@
 			settings = {
 
 				wallpaper = {
+					directory = ./wallpaper;
 					enabled = true;
 					overviewEnabled = true;
 					overviewBlur = 0.4;
