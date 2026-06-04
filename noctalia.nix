@@ -14,11 +14,15 @@
 
 				wallpaper = {
 					setWallpaperOnAllMonitors = false;
-					directory = ./wallpaper;
 					enabled = true;
 					overviewEnabled = true;
 					overviewBlur = 0.4;
 					overviewTint = 0.5;
+					monitors = [
+						{ monitor = "DP-3";    image = ./wallpaper/left.jpg; }
+						{ monitor = "HDMI-A-1"; image = ./wallpaper/middle.jpg; }
+						{ monitor = "DP-2";    image = ./wallpaper/right.jpg; }
+					];
 				};
 
 				bar = {
