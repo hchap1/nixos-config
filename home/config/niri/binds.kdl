@@ -51,3 +51,9 @@ binds {
 	// Launcher (fuzzel)
 	Mod+Space { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
 }
+
+gestures {
+	hot-corners {
+		off
+	}
+}
