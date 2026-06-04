@@ -9,6 +9,13 @@
 		];
 
 		programs.noctalia-shell = {
+
+			wallpapers = {
+				"DP-3" = ./wallpaper/left.jpg;
+				"HDMI-A-1" = ./wallpaper/middle.jpg;
+				"DP-2" = ./wallpaper/right.jpg;
+			};
+
 			enable = true;
 			settings = {
 
@@ -18,11 +25,6 @@
 					overviewEnabled = true;
 					overviewBlur = 0.4;
 					overviewTint = 0.5;
-					monitors = [
-						{ monitor = "DP-3";    image = ./wallpaper/left.jpg; }
-						{ monitor = "HDMI-A-1"; image = ./wallpaper/middle.jpg; }
-						{ monitor = "DP-2";    image = ./wallpaper/right.jpg; }
-					];
 				};
 
 				bar = {
