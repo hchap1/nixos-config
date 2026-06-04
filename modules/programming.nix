@@ -2,7 +2,7 @@
 
 {
 	environment.systemPackages = with pkgs; [
-		python312
+		python3
 		uv
 
 		rustc
