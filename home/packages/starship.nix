@@ -1,79 +1,78 @@
 { config, pkgs, ... }:
 
 {
-	programs.starship = {
-		enable = true;
+  programs.starship = {
+    enable = true;
 
-		settings = {
-			add_newline = true;
+    settings = {
+      add_newline = true;
 
-			# Line 1: full path + git branch
-			format = ''
-				$directory$git_branch$git_status
-				$character
-				'';
+      format = ''
+        $directory$git_branch$git_status
+        $character
+      '';
 
-			palette = "catppuccin_mocha";
+      palette = "catppuccin_mocha";
 
-			directory = {
-				truncation_length = 0;
-				truncate_to_repo = false;
+      directory = {
+        truncation_length = 0;
+        truncate_to_repo = false;
 
-			# Folder icon + mauve styling
-				format = "[ $path]($style) ";
-				style = "mauve bold";
-			};
+        # Folder icon + mauve styling
+        format = "[ $path]($style) ";
+        style = "mauve bold";
+      };
 
-			git_branch = {
-			# Git icon + branch
-				format = "on [ $branch]($style) ";
-				style = "lavender";
-			};
+      git_branch = {
+        # Git icon + branch
+        format = "on [ $branch]($style) ";
+        style = "lavender";
+      };
 
-			git_status = {
-			# Small status indicators (optional but useful)
-				format = "([$all_status$ahead_behind]($style)) ";
-				style = "peach";
-			};
-			character = {
-				success_symbol = "[❯](green bold) ";
-				error_symbol = "[❯](red bold) ";
-				vicmd_symbol = "[❮](mauve bold) ";
-			};
+      git_status = {
+        # Small status indicators (optional but useful)
+        format = "([$all_status$ahead_behind]($style)) ";
+        style = "peach";
+      };
 
-			# Catppuccin Mocha palette (mauve-forward tweak)
-			palettes.catppuccin_mocha = {
-				rosewater = "#f5e0dc";
-				flamingo  = "#f2cdcd";
-				pink      = "#f5c2e7";
-				mauve     = "#cba6f7";
-				red       = "#f38ba8";
-				maroon    = "#eba0ac";
-				peach     = "#fab387";
-				yellow    = "#f9e2af";
-				green     = "#a6e3a1";
-				teal      = "#94e2d5";
-				sky       = "#89dceb";
-				sapphire  = "#74c7ec";
-				blue      = "#89b4fa";
-				lavender  = "#b4befe";
+      character = {
+        success_symbol = "[❯](mauve bold) ";
+        error_symbol = "[❯](red bold) ";
+        vicmd_symbol = "[❮](mauve bold) ";
+      };
 
-				text      = "#cdd6f4";
-				subtext1  = "#bac2de";
-				subtext0  = "#a6adc8";
+      palettes.catppuccin_mocha = {
+        rosewater = "#f5e0dc";
+        flamingo  = "#f2cdcd";
+        pink      = "#f5c2e7";
+        mauve     = "#cba6f7";
+        red       = "#f38ba8";
+        maroon    = "#eba0ac";
+        peach     = "#fab387";
+        yellow    = "#f9e2af";
+        green     = "#a6e3a1";
+        teal      = "#94e2d5";
+        sky       = "#89dceb";
+        sapphire  = "#74c7ec";
+        blue      = "#89b4fa";
+        lavender  = "#b4befe";
 
-				overlay2  = "#9399b2";
-				overlay1  = "#7f849c";
-				overlay0  = "#6c7086";
+        text      = "#cdd6f4";
+        subtext1  = "#bac2de";
+        subtext0  = "#a6adc8";
 
-				surface2  = "#585b70";
-				surface1  = "#45475a";
-				surface0  = "#313244";
+        overlay2  = "#9399b2";
+        overlay1  = "#7f849c";
+        overlay0  = "#6c7086";
 
-				base      = "#1e1e2e";
-				mantle    = "#181825";
-				crust     = "#11111b";
-			};
-		};
-	};
+        surface2  = "#585b70";
+        surface1  = "#45475a";
+        surface0  = "#313244";
+
+        base      = "#1e1e2e";
+        mantle    = "#181825";
+        crust     = "#11111b";
+      };
+    };
+  };
 }
