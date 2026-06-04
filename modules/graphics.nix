@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+
+	# Graphics adjacent as controls sleep recovery
+	boot.kernelParams = [ "mem_sleep_default=deep" "nvidia-drm.modeset=1" ];
 	programs.steam.enable = true;
 	services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -10,12 +13,11 @@
 	};
 
 	hardware.nvidia = {
+		powerManagement.enable = true;
 		modesetting.enable = true;
 		open = false;
 		nvidiaSettings = true;
 	};
-
-	boot.kernelParams = [ "nvidia-drm.modeset=1" ];
 
 	environment.sessionVariables = {
 		GBM_BACKEND = "nvidia-drm";
