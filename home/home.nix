@@ -25,6 +25,7 @@
 
 			# Theming
 			./packages/theme.nix
+			./packages/wallpaper.nix
 	];
 
 	home.sessionVariables = {
