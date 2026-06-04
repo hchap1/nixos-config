@@ -4,7 +4,6 @@
 		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 		
 		home-manager = {
-
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
@@ -45,6 +44,7 @@
 				modules = [
 					./hardware-configuration.nix
 					./configuration.nix
+					./noctalia.nix
 					catppuccin.nixosModules.catppuccin
 					home-manager.nixosModules.home-manager
 					{
