@@ -1,12 +1,5 @@
 { pkgs, inputs, ... }:
 {
-  home-manager.users.hc = {
-    # import the home manager module
-    imports = [
-      inputs.noctalia.homeModules.default
-    ];
-
-    # configure options
     programs.noctalia-shell = {
 		enable = true;
 
@@ -72,16 +65,16 @@
           };
         };
         colorSchemes.predefinedScheme = "Monochrome";
-        general = {
-          avatarImage = "/home/drfoobar/.face";
-          radiusRatio = 0.2;
-        };
+        # general = {
+          # avatarImage = "/home/drfoobar/.face";
+          # radiusRatio = 0.2;
+        # };
         location = {
-          monthBeforeDay = true;
-          name = "Marseille, France";
+          monthBeforeDay = false;
+          name = "Brisbane, Australia";
         };
       };
       # this may also be a string or a path to a JSON file.
     };
-  };
+ 
 }
