@@ -26,7 +26,7 @@
 
 		# Theming
 		./packages/theme.nix
-		./packages/noctalia.nix
+		# ./packages/noctalia.nix
 	];
 
 	home.sessionVariables = {

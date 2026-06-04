@@ -30,7 +30,7 @@
 		};
 	};
 
-	outputs = { self, nixpkgs, home-manager, catppuccin, nix-index-database, nvim-config, noctalia, ... } @ inputs:
+	outputs = { self, nixpkgs, home-manager, catppuccin, nix-index-database, nvim-config, ... } @ inputs:
 	let
 		system = "x86_64-linux";
 		pkgs = nixpkgs.legacyPackages.${system};
