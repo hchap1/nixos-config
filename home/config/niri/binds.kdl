@@ -49,5 +49,5 @@ binds {
 	Mod+Tab { toggle-overview; }
 
 	// Launcher (fuzzel)
-	Mod+Space { spawn "fuzzel"; }
+	Mod+Space { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
 }

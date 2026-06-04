@@ -20,49 +20,54 @@
 				};
 
 				bar = {
-					density = "compact";
+					density = "default";
+					backgroundOpacity = 0.7;
+					enableExclusionZoneInset = false;
 					position = "top";
 					showCapsule = false;
 					widgets = {
-						widgets = {
-							left = [
-							{
-								id = "Launcher";
-							}
-							{
-								id = "Clock";
-							}
-							{
-								id = "SystemMonitor";
-							}
-							{
-								id = "ActiveWindow";
-							}
-							{
-								id = "MediaMini";
-							}
-							];
-							center = [
-							{
-								hideUnoccupied = false;
-								id = "Workspace";
-							}
-							];
-							right = [
-							{
-								id = "Tray";
-							}
-							{
-								id = "NotificationHistory";
-							}
-							{
-								id = "Volume";
-							}
-							{
-								id = "ControlCenter";
-							}
-							];
-						};
+						left = [
+						{
+							id = "Launcher";
+						}
+						{
+							id = "Clock";
+						}
+						{
+							id = "SystemMonitor";
+						}
+						{
+							id = "ActiveWindow";
+						}
+						{
+							id = "MediaMini";
+						}
+						];
+						center = [
+						{
+							id = "Workspace";
+						}
+						];
+						right = [
+						{
+							id = "Tray";
+						}
+						{
+							id = "NotificationHistory";
+						}
+						{
+							id = "Battery";
+						}
+						{
+							id = "Volume";
+						}
+						{
+							id = "Brightness";
+						}
+						{
+							id = "ControlCenter";
+						}
+						];
 					};
 					colorSchemes.predefinedScheme = "Monochrome";
 					location = {
@@ -92,4 +97,5 @@
 				};
 			};
 		};
-	}
+	};
+}
