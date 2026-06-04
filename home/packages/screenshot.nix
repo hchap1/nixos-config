@@ -1,21 +1,31 @@
 { pkgs, ... }:
 
-{
-	home.packages = with pkgs; [
+let
+screenshot-clip = pkgs.writeShellApplication {
+	name = "screenshot-clip";
+
+	runtimeInputs = with pkgs; [
 		grim
-			slurp
-			wl-clipboard
+		slurp
+		wl-clipboard
 	];
 
-	home.file.".local/bin/screenshot-clip".text = ''
-		#!/usr/bin/env bash
+	text = ''
 		set -euo pipefail
 
 		grim -g "$(slurp)" - | wl-copy
 		'';
+};
 
-	home.file.".local/bin/screenshot-save".text = ''
-		#!/usr/bin/env bash
+screenshot-save = pkgs.writeShellApplication {
+	name = "screenshot-save";
+
+	runtimeInputs = with pkgs; [
+		grim
+			slurp
+	];
+
+	text = ''
 		set -euo pipefail
 
 		dir="$HOME/Pictures/Screenshots"
@@ -25,8 +35,12 @@
 
 		grim -g "$(slurp)" "$file"
 		'';
+};
 
-	home.sessionPath = [
-		"$HOME/.local/bin"
+in
+{
+	home.packages = [
+		screenshot-clip
+			screenshot-save
 	];
 }

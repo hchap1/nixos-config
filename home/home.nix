@@ -19,6 +19,7 @@
 		./packages/ghostty.nix
 		./packages/ssh.nix
 		./packages/screenshot.nix
+		./packages/starship.nix
 
 		# Applications
 		./packages/brave.nix
