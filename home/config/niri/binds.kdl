@@ -27,7 +27,8 @@ binds {
 	Mod+Shift+J { move-window-down-or-to-workspace-down; }
 
 	// Fullscreen
-	Mod+F { fullscreen-window; }
+	Mod+F { toggle-windowed-fullscreen; }
+	Mod+Ctrl+F { fullscreen-window; }
 	Mod+Shift+F { toggle-window-floating; }
 	Mod+V { switch-focus-between-floating-and-tiling; }
 	Mod+Q { close-window; }
