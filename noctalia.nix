@@ -10,16 +10,11 @@
 
 		programs.noctalia-shell = {
 
-			wallpapers = {
-				"DP-3" = ./wallpaper/left.jpg;
-				"HDMI-A-1" = ./wallpaper/middle.jpg;
-				"DP-2" = ./wallpaper/right.jpg;
-			};
-
 			enable = true;
 			settings = {
 
 				wallpaper = {
+					directory = ./wallpaper;
 					setWallpaperOnAllMonitors = false;
 					enabled = true;
 					overviewEnabled = true;
@@ -28,7 +23,20 @@
 				};
 
 				bar = {
-					monitors = [ "HDMI-A-1" ];
+					monitorDirectories = [
+					{
+						monitor = "DP-3";
+						directory = ./wallpaper/left/left.jpg;
+					}
+					{
+						monitor = "DP-2";
+						directory = ./wallpaper/right/right.jpg;
+					}
+					{
+						monitor = "HDMI-A-1";
+						directory = ./wallpaper/middle/middle.jpg;
+					}
+					];
 					outer-corners = false;
 					density = "default";
 					backgroundOpacity = 0.7;
@@ -49,13 +57,36 @@
 						{
 							id = "ActiveWindow";
 						}
-						{
-							id = "MediaMini";
-						}
 						];
 						center = [
 						{
-							id = "Workspace";
+							colorizeIcons = false;
+							hideMode = "hidden";
+							id = "ActiveWindow";
+							maxWidth = 500;
+							scrollingMode = "hover";
+							showIcon = true;
+							textColor = "none";
+							useFixedWidth = false;
+						}
+						{
+							compactMode = true;
+							compactShowAlbumArt = true;
+							compactShowVisualizer = false;
+							hideMode = "hidden";
+							hideWhenIdle = false;
+							id = "MediaMini";
+							maxWidth = 200;
+							panelShowAlbumArt = true;
+							panelShowVisualizer = true;
+							scrollingMode = "hover";
+							showAlbumArt = true;
+							showArtistFirst = false;
+							showProgressRing = true;
+							showVisualizer = true;
+							textColor = "secondary";
+							useFixedWidth = false;
+							visualizerType = "linear";
 						}
 						];
 						right = [
