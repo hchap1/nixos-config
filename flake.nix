@@ -45,6 +45,7 @@
 				modules = [
 					./hardware-configuration.nix
 					./configuration.nix
+					./noctalia.nix
 					catppuccin.nixosModules.catppuccin
 					home-manager.nixosModules.home-manager
 					{
