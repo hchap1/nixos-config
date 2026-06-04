@@ -62,3 +62,7 @@ window-rule {
     xray false
   }
 }
+
+window-rule {
+    opacity 0.8
+}
