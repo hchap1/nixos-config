@@ -50,6 +50,10 @@ binds {
 
 	// Launcher (fuzzel)
 	Mod+Space { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
+
+	// Screenshot Tools
+	Mod+Shift+S { spawn "screenshot-clip"; }
+	Mod+Shift+Ctrl+S { spawn "screenshot-save"; }
 }
 
 gestures {
