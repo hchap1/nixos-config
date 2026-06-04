@@ -45,3 +45,8 @@ window-rule {
   match title="Save File"
   open-floating true
 }
+
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+}
