@@ -8,12 +8,10 @@ in
 	programs.spicetify = {
 		enable = true;
 		theme = spicePkgs.themes.dribbblish;
-		colorScheme = "base";
+		colorScheme = "catppuccin-mocha";
 
 		enabledExtensions = with spicePkgs.extensions; [
-		# add any extensions here, e.g.:
-		# adblock
-		# keyboardShortcut
+			adblock
 		];
 	};
 }
