@@ -2,7 +2,7 @@
 
 {
     programs.noctalia = {
-		enable = true
+		enable = true;
 		colors = {
 			mError = "#f38ba8";
 			mOnError = "#1e1e2e";
