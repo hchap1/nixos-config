@@ -16,5 +16,10 @@
 		gc = "git commit";
 		gp = "git push";
 	};
+
+	programs.zoxide = {
+		enable = true;
+		enableFishIntegration = true;
+	};
   };
 }

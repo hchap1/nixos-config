@@ -13,6 +13,7 @@
 			settings = {
 
 				wallpaper = {
+					setWallpaperOnAllMonitors = false;
 					directory = ./wallpaper;
 					enabled = true;
 					overviewEnabled = true;
@@ -21,6 +22,8 @@
 				};
 
 				bar = {
+					monitors = [ "HDMI-A-1" ];
+					outer-corners = false;
 					density = "default";
 					backgroundOpacity = 0.7;
 					enableExclusionZoneInset = false;
