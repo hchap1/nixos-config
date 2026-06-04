@@ -2,8 +2,8 @@
 
 {
   programs.waybar = {
-    enable = true;
-
+    enable = false;
+/*
     settings = [
       {
         output = "HDMI-A-1";
@@ -178,5 +178,6 @@
     ];
 
     style = builtins.readFile ../config/waybar/style.css;
+*/
   };
 }

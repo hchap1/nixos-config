@@ -17,7 +17,6 @@
 		./packages/networkmanager-applet.nix
 		./packages/ghostty.nix
 		./packages/ssh.nix
-		./packages/waybar.nix
 
 		# Applications
 		./packages/brave.nix
