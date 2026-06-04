@@ -23,6 +23,7 @@
 			./modules/browser.nix
 			./noctalia.nix
 			./modules/graphics.nix
+			./modules/programming.nix
 		];
 
 	users.users.hc = {
@@ -46,4 +47,8 @@
 	time.timeZone = "Australia/Brisbane";
 	system.stateVersion = "25.11";
 	boot.loader.systemd-boot.configurationLimit = 3;
+
+	# Compat layer for dynamically linked binaries
+	# attempt to patch nvim mason no worky
+	programs.nix-ld.enable = true;
 }
