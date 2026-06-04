@@ -44,4 +44,5 @@
 
 	time.timeZone = "Australia/Brisbane";
 	system.stateVersion = "25.11";
+	boot.loader.systemd-boot.configurationLimit = 3;
 }

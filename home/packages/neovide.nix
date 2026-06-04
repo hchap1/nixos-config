@@ -12,10 +12,11 @@
 		 target="$(realpath "$target")"
 
 		 if [ -d "$target" ]; then
-		 exec ${pkgs.neovide}/bin/neovide --cwd "$target"
+		 niri msg action spawn -- exec ${pkgs.neovide}/bin/neovide --cwd "$target"
 		 else
-		 exec ${pkgs.neovide}/bin/neovide "$target"
+		 niri msg action spawn exec ${pkgs.neovide}/bin/neovide "$target"
 		 fi
+		 exit
 		 '')
 	];
 }
