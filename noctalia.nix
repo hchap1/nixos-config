@@ -13,6 +13,7 @@
 			settings = {
 
 				wallpaper = {
+					directory = "./wallpaper/test.jpg"
 					enabled = true;
 					overviewEnabled = true;
 					overviewBlur = 0.4;
@@ -94,6 +95,32 @@
 					mHover = "#2a2a3a";
 					mSurfaceVariant = "#313244";
 					mTertiary = "#f5c2e7";
+				};
+
+				appLauncher = {
+					enableClipboardHistory = false;
+					autoPasteClipboard = false;
+					enableClipPreview = true;
+					clipboardWrapText = true;
+					enableClipboardSmartIcons = true;
+					enableClipboardChips = true;
+					position = "center";
+					pinnedApps = [ "Brave Web Browser" "Spotify" ];
+					sortByMostUsed = true;
+					terminalCommand = "ghostty -e";
+					customLaunchPrefixEnabled = false;
+					customLaunchPrefix = "";
+					viewMode = "list";
+					showCategories = true;
+					iconMode = "tabler";
+					showIconBackground = false;
+					enableSettingsSearch = true;
+					enableWindowsSearch = true;
+					enableSessionSearch = true;
+					ignoreMouseInput = false;
+					screenshotAnnotationTool = "";
+					overviewLayer = false;
+					density = "default";
 				};
 			};
 		};
