@@ -3,7 +3,7 @@
 
 {
 	programs.niri.enable = true;
-
+	programs.niri.settings.layout.always-center-single-column = true;
 	xdg.portal.enable = true;
 	security.polkit.enable = true;
 
