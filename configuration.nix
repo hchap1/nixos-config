@@ -51,4 +51,6 @@
 	# Compat layer for dynamically linked binaries
 	# attempt to patch nvim mason no worky
 	programs.nix-ld.enable = true;
+
+	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
