@@ -2,15 +2,15 @@
 
 {
 	environment.systemPackages = with pkgs; [
-		python3
-			uv
-			gcc
-			pkg-config
-			rustc
-			cargo
-			rust-analyzer
-			python3
-			basedpyright
+		(python3.withPackages (ps: []))
+		uv
+		gcc
+		pkg-config
+		rustc
+		cargo
+		rust-analyzer
+		basedpyright
+		pip3
 	];
 
 	environment.variables = {
