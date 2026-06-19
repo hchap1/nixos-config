@@ -7,40 +7,33 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-
 		catppuccin = {
 			url = "github:catppuccin/nix";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-
 		nix-index-database = {
 			url = "github:nix-community/nix-index-database";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-
 		nvim-config = {
 			url = "github:hchap1/nvim";
 			flake = false;
 		};
-
 		noctalia = {
 			url = "github:noctalia-dev/noctalia-shell";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-
 		spicetify-nix = {
 			url = "github:Gerg-L/spicetify-nix";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 	};
-
 	outputs = { self, nixpkgs, home-manager, catppuccin, nix-index-database, nvim-config, spicetify-nix, ... } @ inputs:
 	let
 		system = "x86_64-linux";
 		pkgs = nixpkgs.legacyPackages.${system};
-
 	in
-	{	
+	{
 		nixosConfigurations = {
 			battleship = nixpkgs.lib.nixosSystem {
 				inherit system;

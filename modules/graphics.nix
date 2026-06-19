@@ -67,11 +67,6 @@
     enable32Bit = true;           # needed for Steam / 32-bit games via Proton
   };
 
-  hardware.opengl = {             # stable / older unstable (legacy name)
-    enable = true;
-    driSupport32Bit = true;
-  };
-
   # ── Wayland / Nvidia environment variables ────────────────────────────────────
 
   environment.sessionVariables = {

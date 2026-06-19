@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
 	programs.fish = {
@@ -6,6 +6,7 @@
 
 		shellInit = ''
 			set -g fish_greeting
+			set -gx LD_LIBRARY_PATH ${lib.makeLibraryPath [ pkgs.wayland pkgs.libxkbcommon pkgs.pipewire ]}:$LD_LIBRARY_PATH
 			'';
 
 		shellAliases = {
