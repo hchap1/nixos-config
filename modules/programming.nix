@@ -10,7 +10,6 @@
 		cargo
 		rust-analyzer
 		basedpyright
-		pip3
 	];
 
 	environment.variables = {
