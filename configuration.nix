@@ -43,7 +43,7 @@
 
 		# Add your laptop's public key here after generating it (see SSH setup instructions)
 		openssh.authorizedKeys.keys = [
-			# "ssh-ed25519 AAAA... laptop"
+			ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBr9bjUsmH95I5ggTUDOKiZd05X888c+UE/4umaRuLUI laptop
 		];
 	};
 
