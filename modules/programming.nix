@@ -11,6 +11,7 @@
 		rust-analyzer
 		basedpyright
 		rsync
+		claude-code
 	];
 
 	environment.variables = {
