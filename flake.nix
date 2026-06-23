@@ -34,6 +34,34 @@
 		pkgs = nixpkgs.legacyPackages.${system};
 	in
 	{
+		devShells.${system}.python = let
+			libs = pkgs.lib.makeLibraryPath (with pkgs; [
+				stdenv.cc.cc.lib
+				zlib
+				glib
+				libGL
+				SDL2
+				SDL2_image
+				SDL2_mixer
+				SDL2_ttf
+				freetype
+				libpng
+				libjpeg_turbo
+				libwebp
+				wayland
+				libxkbcommon
+				pipewire
+				xorg.libxcb
+			]);
+		in pkgs.mkShell {
+			name = "python-dev";
+			packages = with pkgs; [ python3 uv ];
+			shellHook = ''
+				export LD_LIBRARY_PATH="${libs}:/run/opengl-driver/lib:$LD_LIBRARY_PATH"
+				echo "Python ML shell ready — use 'uv add <package>' to install packages"
+			'';
+		};
+
 		nixosConfigurations = {
 			battleship = nixpkgs.lib.nixosSystem {
 				inherit system;

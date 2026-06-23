@@ -16,6 +16,7 @@
 			ga = "git add";
 			gc = "git commit";
 			gp = "git push";
+			pyshell = "nix develop /home/hc/nixos-config#python --command fish";
 		};
 	};
 

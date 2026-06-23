@@ -24,6 +24,7 @@
 			./noctalia.nix
 			./modules/graphics.nix
 			./modules/programming.nix
+			./modules/ssh-server.nix
 			];
 
 	users.users.hc = {
@@ -39,6 +40,11 @@
 		];
 
 		shell = pkgs.fish;
+
+		# Add your laptop's public key here after generating it (see SSH setup instructions)
+		openssh.authorizedKeys.keys = [
+			# "ssh-ed25519 AAAA... laptop"
+		];
 	};
 
 # Allow 'unfree' packages [e.g. Spotify]
