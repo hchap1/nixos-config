@@ -4,10 +4,10 @@
 {
 	imports =
 		[
-			# Hardware Config
-			./hardware-configuration.nix
+# Hardware Config
+		./hardware-configuration.nix
 
-			# OS Modules
+# OS Modules
 			./modules/shell.nix
 			./modules/boot.nix
 			./modules/networking.nix
@@ -15,7 +15,7 @@
 			./modules/bluetooth.nix
 			./modules/desktop.nix
 
-			# System Packages
+# System Packages
 			./modules/keyd.nix
 			./modules/fonts.nix
 			./modules/notify.nix
@@ -24,24 +24,24 @@
 			./noctalia.nix
 			./modules/graphics.nix
 			./modules/programming.nix
-		];
+			];
 
 	users.users.hc = {
 		isNormalUser = true;
 		extraGroups = [
 			"wheel"
-			"networkmanager"
-			"audio"
-			"video"
-			"bluetooth"
-			"storage"
-			"input"
+				"networkmanager"
+				"audio"
+				"video"
+				"bluetooth"
+				"storage"
+				"input"
 		];
 
 		shell = pkgs.fish;
 	};
 
-	# Allow 'unfree' packages [e.g. Spotify]
+# Allow 'unfree' packages [e.g. Spotify]
 	nixpkgs.config.allowUnfree = true;
 
 	time.timeZone = "Australia/Brisbane";
@@ -50,7 +50,14 @@
 
 	# Compat layer for dynamically linked binaries
 	# attempt to patch nvim mason no worky
-	programs.nix-ld.enable = true;
-
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+	programs.nix-ld = {
+		enable = true;
+		libraries = with pkgs; [
+			stdenv.cc.cc.lib   # provides libstdc++.so.6
+				zlib
+				glib
+		];
+	};
 }

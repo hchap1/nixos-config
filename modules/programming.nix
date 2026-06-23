@@ -2,7 +2,7 @@
 
 {
 	environment.systemPackages = with pkgs; [
-		(python3.withPackages (ps: []))
+		python3
 		uv
 		gcc
 		pkg-config
@@ -10,6 +10,7 @@
 		cargo
 		rust-analyzer
 		basedpyright
+		rsync
 	];
 
 	environment.variables = {
