@@ -25,6 +25,7 @@
 		./packages/brave.nix
 		./packages/spotify.nix
 		./packages/vesktop.nix
+		./packages/games.nix
 
 		# Theming
 		./packages/theme.nix

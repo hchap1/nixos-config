@@ -83,7 +83,9 @@
     NVD_BACKEND = "direct";
 
     # Tells SDL2 applications to use Wayland natively instead of XWayland.
-    SDL_VIDEODRIVER = "wayland";
+    # NOTE: Do NOT set this globally if running Wine/Proton games — Wine needs
+    # XWayland. Override per-app (e.g. via Steam launch options) if needed.
+    # SDL_VIDEODRIVER = "wayland";
 
     # Same for Qt5/6 apps.
     QT_QPA_PLATFORM = "wayland";
@@ -97,5 +99,9 @@
     # Runs Steam sessions inside Gamescope (Valve's micro-compositor).
     # Gives you VRR, HDR, and frame-limiter support independent of niri.
     gamescopeSession.enable = true;
+
+    # GE-Proton: better compatibility for older Windows games (e.g. RA2).
+    # Select it per-game in Steam → Properties → Compatibility.
+    extraCompatPackages = [ pkgs.proton-ge-bin ];
   };
 }
