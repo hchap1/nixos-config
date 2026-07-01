@@ -62,6 +62,42 @@
 			'';
 		};
 
+		devShells.${system}.rust = let
+			libs = pkgs.lib.makeLibraryPath (with pkgs; [
+				wayland
+				libxkbcommon
+				libGL
+				libglvnd
+				vulkan-loader
+				xorg.libX11
+				xorg.libXcursor
+				xorg.libXi
+				xorg.libXrandr
+				xorg.libxcb
+				stdenv.cc.cc.lib
+			]);
+		in pkgs.mkShell {
+			name = "rust-iced";
+
+			# buildInputs exposes .pc files so cargo build finds libs via pkg-config
+			buildInputs = with pkgs; [
+				wayland
+				libxkbcommon
+				vulkan-loader
+				libGL
+				xorg.libX11
+				xorg.libXcursor
+				xorg.libXi
+				xorg.libXrandr
+			];
+
+			shellHook = ''
+				export LD_LIBRARY_PATH="${libs}:/run/opengl-driver/lib:$LD_LIBRARY_PATH"
+				export WINIT_UNIX_BACKEND=wayland
+				echo "Rust/iced Wayland shell ready"
+			'';
+		};
+
 		nixosConfigurations = {
 			battleship = nixpkgs.lib.nixosSystem {
 				inherit system;

@@ -17,6 +17,7 @@
 			gc = "git commit";
 			gp = "git push";
 			pyshell = "nix develop /home/hc/nixos-config#python --command fish";
+			rustshell = "nix develop /home/hc/nixos-config#rust --command fish";
 		};
 	};
 

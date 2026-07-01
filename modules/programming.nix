@@ -9,5 +9,6 @@
 		rust-analyzer
 		rsync
 		claude-code
+		python3    # required by lutris's umu-run (#!/usr/bin/env python3)
 	];
 }
